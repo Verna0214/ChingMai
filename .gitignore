@@ -1,0 +1,15 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# npm
+node_modules
+temp/
+upload/
+*.log
+*.gz
+.env
+
+# gcp
+.env_variables
