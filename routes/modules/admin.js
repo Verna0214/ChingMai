@@ -3,6 +3,7 @@ const router = express.Router()
 
 const adminController = require('../../controllers/admin-controller')
 
+router.get('/login', adminController.getLoginPage)
 router.get('/spots', adminController.getSpotsPage)
 // fallback router
 router.use('/', (req, res) => res.redirect('/admin/spots'))

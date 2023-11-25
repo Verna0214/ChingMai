@@ -1,0 +1,32 @@
+{{> header}}
+<div class="container">
+  <div class="row mt-5">
+
+    <div class="col s12 l6 mb-2">
+      <h4 class="cyan-text text-darken-2 text-center">Only for Admin</h4>
+      <form class="form-login" action="/admin/login" method="POST" style="margin: 2.5rem 0;">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">mail_outline</i>
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+            <span class="helper-text" data-error="Wrong format" data-success="Right format"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">lock_outline</i>
+            <input id="password" type="text" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <button class="waves-effect waves-light btn" type="submit">Login</button>
+      </form>
+    </div>
+
+    <div class="col s12 l6">
+      <img src="https://2.bp.blogspot.com/-miZisLN4-Ks/WnuyJDL7hMI/AAAAAAABKAY/yCT_6kBR3l8C2HJ6iP3wIjhq3Od1YVyVwCLcBGAs/s800/internet_nidankai_ninsyou_man.png" alt="" style="width: 100%;">
+    </div>
+  </div>
+
+</div>
