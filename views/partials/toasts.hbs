@@ -1,0 +1,12 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    {{#if error_msg}}
+      M.toast({ html: '{{ error_msg }}', classes: 'red lighten-1 rounded' })
+    {{/if}}
+
+    {{#if success_msg}}
+      M.toast({ html: '{{ success_msg }}', classes: 'light-blue darken-1 rounded' })
+    {{/if}}
+  })
+</script>

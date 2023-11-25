@@ -15,12 +15,12 @@ passport.use(new LocalStrategy(
   async (req, email, password, done) => {
     const admin = await Admin.findOne({ where: { email } })
     if (!admin) {
-      return done(null, false)
+      return done(null, false, req.flash('error_msg', 'Email is not correct！'))
     }
 
     const passwordCheck = bcrypt.compareSync(password, admin.password)
     if (!passwordCheck) {
-      return done(null, false)
+      return done(null, false, req.flash('error_msg', 'Password is not correct！'))
     }
     return done(null, admin)
   }

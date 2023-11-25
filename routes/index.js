@@ -9,8 +9,9 @@ const spotController = require('../controllers/spot-controller')
 
 router.use('/admin', authenticated, admin)
 router.get('/login', adminController.getLoginPage)
-router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), adminController.login)
+router.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), adminController.login)
 router.get('/logout', adminController.logout)
+router.get('/index', spotController.getIndex)
 router.get('/', spotController.getEntry)
 
 // fallback router

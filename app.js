@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express')
 const session = require('express-session')
 const exphbs = require('express-handlebars')
+const flash = require('connect-flash')
 
 const passport = require('./config/passport')
 const routes = require('./routes')
@@ -22,6 +23,12 @@ app.use(session({
 }))
 app.use(passport.initialize())
 app.use(passport.session())
+app.use(flash())
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg')
+  res.locals.error_msg = req.flash('error_msg')
+  next()
+})
 
 app.use(routes)
 
