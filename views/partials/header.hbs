@@ -3,19 +3,25 @@
     <a href="/" class="brand-logo ml-2">Ching Mai Travel</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">widgets</i></a>
     <ul class="right hide-on-med-and-down mr-2">
-      <li><a href="#">Home</a></li>
-      <li><a href="/login">Admin Login</a></li>
-      <li><a href="#">Backend</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <li><a href="/index">Home</a></li>
+      {{#if user}}
+        <li><a href="#">Backend</a></li>
+        <li><a href="/logout">Logout</a></li>
+      {{else}}
+        <li><a href="/login">Admin Login</a></li>
+      {{/if}}
     </ul>
   </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="#">Home</a></li>
-  <li><a href="/login">Admin Login</a></li>
-  <li><a href="#">Backend</a></li>
-  <li><a href="/logout">Logout</a></li>
+  <li><a href="/index">Home</a></li>
+  {{#if user}}
+    <li><a href="#">Backend</a></li>
+    <li><a href="/logout">Logout</a></li>
+  {{else}}
+    <li><a href="/login">Admin Login</a></li>
+  {{/if}}
 </ul>
 
 <script>

@@ -3,8 +3,8 @@ const adminController = {
     return res.render('admin/login')
   },
   login: (req, res) => {
-    const admin = req.user.toJSON()
-    req.flash('success_msg', `Welcome back, ${admin.name}！`)
+    const user = req.user.toJSON()
+    req.flash('success_msg', `Welcome back, ${user.name}！`)
     return res.redirect('/admin/spots')
   },
   logout: (req, res) => {

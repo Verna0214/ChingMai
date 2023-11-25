@@ -6,6 +6,7 @@ const session = require('express-session')
 const exphbs = require('express-handlebars')
 const flash = require('connect-flash')
 
+const { getUser } = require('./helpers/auth-helpers')
 const passport = require('./config/passport')
 const routes = require('./routes')
 
@@ -27,6 +28,7 @@ app.use(flash())
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg')
   res.locals.error_msg = req.flash('error_msg')
+  res.locals.user = getUser(req)
   next()
 })
 
