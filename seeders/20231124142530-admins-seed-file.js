@@ -15,7 +15,7 @@ module.exports = {
     */
     await queryInterface.bulkInsert('Admins', [{
       name: 'root',
-      email: 'root@example',
+      email: 'root@example.com',
       password: bcrypt.hashSync('12345678', 10),
       created_at: new Date(),
       updated_at: new Date()
