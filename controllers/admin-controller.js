@@ -1,3 +1,5 @@
+const { Spot } = require('../models')
+
 const adminController = {
   getLoginPage: (req, res) => {
     return res.render('admin/login')
@@ -13,8 +15,13 @@ const adminController = {
       return res.redirect('/index')
     })
   },
-  getSpotsPage: (req, res) => {
-    return res.render('admin/spots')
+  getSpotsPage: async (req, res, next) => {
+    try {
+      const spots = await Spot.findAll({ raw: true })
+      res.render('admin/spots', { spots })
+    } catch (err) {
+      next(err)
+    }
   }
 }
 

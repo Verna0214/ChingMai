@@ -1,32 +1,27 @@
 {{> header}}
 <div class="container">
   <h3 class="blue-grey-text text-darken-1">Website backend</h3>
-  <h5 class="orange-text text-darken-4 mb-5">All spots data</h5>
-  <table class="highlight responsive-table">
+  <h5 class="orange-text text-darken-4 mb-3">All spots data</h5>
+  <a href="/admin/spots/create" class="waves-effect waves-light btn mb-3" style="background: #fb8c00;"><i class="material-icons left">add</i>Create</a>
+  <table class="highlight">
     <thead>
       <tr>
-          <th>Name</th>
-          <th>Item Name</th>
-          <th>Item Price</th>
+          <th>Spot</th>
+          <th>Category</th>
+          <th>#</th>
+          <th>#</th>
       </tr>
     </thead>
 
     <tbody>
+      {{#each spots}}
       <tr>
-        <td>Alvin</td>
-        <td>Eclair</td>
-        <td>$0.87</td>
+        <td><a href="/admin/spots/{{this.id}}">{{this.name}}</a></td>
+        <td>[Cafe]</td>
+        <td><a href="/admin/spots/{{this.id}}/edit"><i class="material-icons">edit</i></a></td>
+        <td><a href="#"><i class="material-icons">delete</i></a></td>
       </tr>
-      <tr>
-        <td>Alan</td>
-        <td>Jellybean</td>
-        <td>$3.76</td>
-      </tr>
-      <tr>
-        <td>Jonathan</td>
-        <td>Lollipop</td>
-        <td>$7.00</td>
-      </tr>
+      {{/each}}
     </tbody>
   </table>
 </div>

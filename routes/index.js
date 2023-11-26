@@ -3,6 +3,7 @@ const router = express.Router()
 
 const passport = require('../config/passport')
 const { authenticated } = require('../middleware/auth')
+const { generalErrorHandler } = require('../middleware/error-handler')
 const admin = require('./modules/admin')
 const adminController = require('../controllers/admin-controller')
 const spotController = require('../controllers/spot-controller')
@@ -16,5 +17,6 @@ router.get('/', spotController.getEntry)
 
 // fallback router
 router.use('/', (req, res) => res.redirect('/'))
+router.use('/', generalErrorHandler)
 
 module.exports = router
