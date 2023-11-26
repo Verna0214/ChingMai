@@ -17,7 +17,7 @@
       {{#each spots}}
       <tr>
         <td><a href="/admin/spots/{{this.id}}">{{this.name}}</a></td>
-        <td>[Cafe]</td>
+        <td>[{{this.Category.name}}]</td>
         <td><a href="/admin/spots/{{this.id}}/edit"><i class="material-icons">edit</i></a></td>
         <td><a href="#"><i class="material-icons">delete</i></a></td>
       </tr>

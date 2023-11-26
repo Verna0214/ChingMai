@@ -1,4 +1,4 @@
-const { Spot } = require('../models')
+const { Spot, Category } = require('../models')
 
 const adminController = {
   getLoginPage: (req, res) => {
@@ -17,7 +17,11 @@ const adminController = {
   },
   getSpotsPage: async (req, res, next) => {
     try {
-      const spots = await Spot.findAll({ raw: true })
+      const spots = await Spot.findAll({
+        raw: true,
+        nest: true,
+        include: [Category]
+      })
       res.render('admin/spots', { spots })
     } catch (err) {
       next(err)
