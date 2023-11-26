@@ -8,7 +8,7 @@
 <div class="row">
   <div class="input-field col s12">
     <i class="material-icons prefix">category</i>
-    <select>
+    <select name="categoryId">
       {{#each categories}}
       <option value="{{this.id}}">{{this.name}}</option>
       {{/each}}
@@ -33,19 +33,19 @@
 <div class="row">
   <div class="input-field col s6">
     <i class="material-icons prefix">schedule</i>
-    <input id="opening_hours" name="opening_hours" type="text" class="validate">
+    <input id="opening_hours" name="openingHours" type="text" class="validate">
     <label for="opening_hours">Opening hours (24H)</label>
   </div>
   <div class="input-field col s6">
     <i class="material-icons prefix">watch_later</i>
-    <input id="closed_hours" name="closed_hours" type="text" class="validate">
+    <input id="closed_hours" name="closedHours" type="text" class="validate">
     <label for="closed_hours">Closed hours (24H)</label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s12">
     <i class="material-icons prefix">edit_note</i>
-    <textarea id="description" class="materialize-textarea"></textarea>
+    <textarea id="description" name="description" class="materialize-textarea"></textarea>
     <label for="description">Description</label>
   </div>
 </div>

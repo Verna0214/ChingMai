@@ -22,7 +22,7 @@ const adminController = {
         nest: true,
         include: [Category]
       })
-      res.render('admin/spots', { spots })
+      return res.render('admin/spots', { spots })
     } catch (err) {
       next(err)
     }
@@ -30,7 +30,26 @@ const adminController = {
   createSpotPage: async (req, res, next) => {
     try {
       const categories = await Category.findAll({ raw: true })
-      res.render('admin/create', { categories })
+      return res.render('admin/create', { categories })
+    } catch (err) {
+      next(err)
+    }
+  },
+  postSpot: async (req, res, next) => {
+    try {
+      const { name, categoryId, tel, address, openingHours, closedHours, description } = req.body
+      if (!name || !categoryId || !tel || !address || !openingHours || !closedHours || !description) throw new Error('欄位請填寫完成！')
+      await Spot.create({
+        name,
+        tel,
+        address,
+        opening_hours: openingHours,
+        closed_hours: closedHours,
+        description,
+        categoryId
+      })
+      req.flash('success_msg', '成功新增一筆景點資料！')
+      return res.redirect('/admin/spots')
     } catch (err) {
       next(err)
     }
