@@ -26,6 +26,14 @@ const adminController = {
     } catch (err) {
       next(err)
     }
+  },
+  createSpotPage: async (req, res, next) => {
+    try {
+      const categories = await Category.findAll({ raw: true })
+      res.render('admin/create', { categories })
+    } catch (err) {
+      next(err)
+    }
   }
 }
 

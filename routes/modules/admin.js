@@ -3,6 +3,7 @@ const router = express.Router()
 
 const adminController = require('../../controllers/admin-controller')
 
+router.get('/spots/create', adminController.createSpotPage)
 router.get('/spots', adminController.getSpotsPage)
 
 // fallback router
