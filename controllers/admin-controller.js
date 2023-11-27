@@ -92,6 +92,17 @@ const adminController = {
     } catch (err) {
       next(err)
     }
+  },
+  deleteSpot: async (req, res, next) => {
+    try {
+      const spot = await Spot.findByPk(req.params.id)
+      if (!spot) throw new Error('景點資料不存在！')
+      await spot.destroy()
+      req.flash('success_msg', '成功刪除景點資料！')
+      return res.redirect('/admin/spots')
+    } catch (err) {
+      next(err)
+    }
   }
 }
 

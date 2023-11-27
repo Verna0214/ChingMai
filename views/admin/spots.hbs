@@ -19,7 +19,11 @@
         <td><a href="/admin/spots/{{this.id}}">{{this.name}}</a></td>
         <td>[{{this.Category.name}}]</td>
         <td><a href="/admin/spots/{{this.id}}/edit"><i class="material-icons">edit</i></a></td>
-        <td><a href="#"><i class="material-icons">delete</i></a></td>
+        <form action="/admin/spots/{{this.id}}?_method=DELETE" method="POST" style="display: inline;">
+          <td>
+            <button class="waves-effect waves-light btn-flat p-0 m-0" type="submit" style="" onclick="return confirm(`確定要刪除「{{this.name}}」這筆景點資料嗎？`)"><i class="material-icons" style="color: red; font-size: 1.6rem;">delete</i></button>
+          </td>
+        </form>
       </tr>
       {{/each}}
     </tbody>
