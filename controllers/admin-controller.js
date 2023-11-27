@@ -103,6 +103,19 @@ const adminController = {
     } catch (err) {
       next(err)
     }
+  },
+  getSpot: async (req, res, next) => {
+    try {
+      const spot = await Spot.findByPk(req.params.id, {
+        raw: true,
+        nest: true,
+        include: [Category]
+      })
+      if (!spot) throw new Error('景點資料不存在！')
+      return res.render('admin/spot', { spot })
+    } catch (err) {
+      next(err)
+    }
   }
 }
 
