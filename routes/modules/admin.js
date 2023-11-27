@@ -4,6 +4,7 @@ const router = express.Router()
 const adminController = require('../../controllers/admin-controller')
 
 router.get('/spots/:id/edit', adminController.editSpotPage)
+router.put('/spots/:id', adminController.putSpot)
 router.get('/spots/create', adminController.createSpotPage)
 router.get('/spots', adminController.getSpotsPage)
 router.post('/spots', adminController.postSpot)

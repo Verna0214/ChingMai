@@ -66,6 +66,32 @@ const adminController = {
     } catch (err) {
       next(err)
     }
+  },
+  putSpot: async (req, res, next) => {
+    try {
+      const { name, categoryId, tel, address, openingHours, closedHours, description } = req.body
+      if (!name || !categoryId || !tel || !address || !openingHours || !closedHours || !description) throw new Error('欄位請填寫完成！')
+      const spot = await Spot.findByPk(req.params.id)
+      if (!spot) throw new Error('景點資料不存在！')
+
+      await Spot.update({
+        name,
+        tel,
+        address,
+        opening_hours: openingHours,
+        closed_hours: closedHours,
+        description,
+        categoryId
+      }, {
+        where: {
+          id: spot.id
+        }
+      })
+      req.flash('success_msg', '成功修改景點資料！')
+      return res.redirect('/admin/spots')
+    } catch (err) {
+      next(err)
+    }
   }
 }
 
