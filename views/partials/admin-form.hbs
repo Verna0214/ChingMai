@@ -1,7 +1,7 @@
 <div class="row">
   <div class="input-field col s12">
     <i class="material-icons prefix">attractions</i>
-    <input id="name" name="name" type="text" class="validate">
+    <input id="name" name="name" type="text" class="validate" value="{{spot.name}}">
     <label for="name">Name</label>
   </div>
 </div>
@@ -10,7 +10,7 @@
     <i class="material-icons prefix">category</i>
     <select name="categoryId">
       {{#each categories}}
-      <option value="{{this.id}}">{{this.name}}</option>
+      <option value="{{this.id}}" {{#ifCond this.id ../spot.categoryId}}selected{{/ifCond}}>{{this.name}}</option>
       {{/each}}
     </select>
     <label>Category Select</label>
@@ -19,33 +19,33 @@
 <div class="row">
   <div class="input-field col s12">
     <i class="material-icons prefix">phone</i>
-    <input id="tel" name="tel" type="text" class="validate">
+    <input id="tel" name="tel" type="text" class="validate" value="{{spot.tel}}">
     <label for="tel">Tel</label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s12">
     <i class="material-icons prefix">place</i>
-    <input id="address" name="address" type="text" class="validate">
+    <input id="address" name="address" type="text" class="validate" value="{{spot.address}}">
     <label for="address">Address</label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s6">
     <i class="material-icons prefix">schedule</i>
-    <input id="opening_hours" name="openingHours" type="text" class="validate">
+    <input id="opening_hours" name="openingHours" type="text" class="validate" value="{{spot.opening_hours}}">
     <label for="opening_hours">Opening hours (24H)</label>
   </div>
   <div class="input-field col s6">
     <i class="material-icons prefix">watch_later</i>
-    <input id="closed_hours" name="closedHours" type="text" class="validate">
+    <input id="closed_hours" name="closedHours" type="text" class="validate" value="{{spot.closed_hours}}">
     <label for="closed_hours">Closed hours (24H)</label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s12">
     <i class="material-icons prefix">edit_note</i>
-    <textarea id="description" name="description" class="materialize-textarea"></textarea>
+    <textarea id="description" name="description" class="materialize-textarea">{{spot.description}}</textarea>
     <label for="description">Description</label>
   </div>
 </div>

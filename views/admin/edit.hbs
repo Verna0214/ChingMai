@@ -1,0 +1,8 @@
+{{> header}}
+<div class="container mb-5 mt-2">
+  <h3 class="blue-grey-text text-darken-1">Website backend</h3>
+  <h5 class="orange-text text-darken-4 mb-5">Edit the spot</h5>
+  <form class="form-create s12" action="/admin/spots/{{spot.id}}?_method=PUT" method="POST">
+    {{> admin-form}}
+  </form>
+</div>

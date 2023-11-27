@@ -53,6 +53,19 @@ const adminController = {
     } catch (err) {
       next(err)
     }
+  },
+  editSpotPage: async (req, res, next) => {
+    try {
+      const [spot, categories] = await Promise.all([
+        Spot.findByPk(req.params.id, { raw: true }),
+        Category.findAll({ raw: true })
+      ])
+      if (!spot) throw new Error('景點資料不存在！')
+
+      return res.render('admin/edit', { categories, spot })
+    } catch (err) {
+      next(err)
+    }
   }
 }
 
