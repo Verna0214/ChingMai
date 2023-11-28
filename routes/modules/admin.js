@@ -9,7 +9,9 @@ router.get('/spots/:id', adminController.getSpot)
 router.put('/spots/:id', adminController.putSpot)
 router.delete('/spots/:id', adminController.deleteSpot)
 router.get('/spots', adminController.getSpotsPage)
+router.get('/categories', adminController.getCategoriesPage)
 router.post('/spots', adminController.postSpot)
+router.post('/categories', adminController.postCategory)
 
 // fallback router
 router.use('/', (req, res) => res.redirect('/admin/spots'))

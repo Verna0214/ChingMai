@@ -116,6 +116,24 @@ const adminController = {
     } catch (err) {
       next(err)
     }
+  },
+  getCategoriesPage: async (req, res, next) => {
+    try {
+      const categories = await Category.findAll({ raw: true })
+      return res.render('admin/categories', { categories })
+    } catch (err) {
+      next(err)
+    }
+  },
+  postCategory: async (req, res, next) => {
+    try {
+      const { name } = req.body
+      if (!name) throw new Error('請輸入類別資料！')
+      await Category.create({ name })
+      res.redirect('/admin/categories')
+    } catch (err) {
+      next(err)
+    }
   }
 }
 

@@ -1,0 +1,38 @@
+{{> header}}
+<div class="container">
+  <h3 class="blue-grey-text text-darken-1 mb-2" style="letter-spacing: 1px;">後台<span class="badge yellow lighten-3">類別資料</span></h3>
+  <div class="row">
+    <form class="col s12" action="/admin/categories" method="POST">
+      <div class="valign-wrapper">
+        <div class="input-field mr-2">
+          <input id="name" name="name" type="text" class="validate">
+          <label for="name">New category</label>
+        </div>
+          <button class="btn-floating btn-small waves-effect waves-light" type="submit"><i class="material-icons">add</i></button>
+      </div>
+    </form>
+  </div>
+  <table class="highlight">
+    <thead>
+      <tr>
+          <th>類別</th>
+          <th>#</th>
+          <th>#</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each categories}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td><a href="/admin/categories/{{this.id}}/edit"><i class="material-icons">edit</i></a></td>
+        <form action="/admin/categories/{{this.id}}?_method=DELETE" method="POST" style="display: inline;">
+          <td>
+            <button class="waves-effect waves-light btn-flat p-0 m-0" type="submit" style="" onclick="return confirm(`確定要刪除「{{this.name}}」這筆類別資料嗎？`)"><i class="material-icons" style="color: red; font-size: 1.6rem;">delete</i></button>
+          </td>
+        </form>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
