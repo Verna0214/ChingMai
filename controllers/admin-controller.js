@@ -143,9 +143,22 @@ const adminController = {
   putCategory: async (req, res, next) => {
     try {
       const { name } = req.body
+      const category = await Category.findByPk(req.params.id)
+      if (!category) throw new Error('查無類別資料！')
       if (!name) throw new Error('欄位不得為空！')
       await Category.update({ name }, { where: { id: req.params.id } })
       req.flash('success_msg', '成功修改一筆類別！')
+      res.redirect('/admin/categories')
+    } catch (err) {
+      next(err)
+    }
+  },
+  deleteCategory: async (req, res, next) => {
+    try {
+      const category = await Category.findByPk(req.params.id)
+      if (!category) throw new Error('查無類別資料！')
+      await category.destroy()
+      req.flash('success_msg', '成功刪除類別！')
       res.redirect('/admin/categories')
     } catch (err) {
       next(err)
