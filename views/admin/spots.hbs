@@ -1,8 +1,24 @@
 {{> header}}
 <div class="container">
   <h3 class="blue-grey-text text-darken-1 mb-2" style="letter-spacing: 1px;">後台<span class="badge yellow lighten-3">景點資料</span></h3>
+  <div class="d-flex">
+    <a href="/admin/spots/create" class="waves-effect waves-light btn mb-2 mr-3" style="background: #fb8c00;"><i class="material-icons left">add</i>Create</a>
+    
+    <!-- Dropdown Trigger -->
+    <a class='dropdown-trigger btn' href='?category=' data-target='dropdown1'><i class="material-icons left">filter_alt</i>Category</a>
 
-  <a href="/admin/spots/create" class="waves-effect waves-light btn mb-2" style="background: #fb8c00;"><i class="material-icons left">add</i>Create</a>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      {{#each categories}}
+        <li><a href="?categoryId={{this.id}}"><i class="material-icons">cloud</i>{{this.name}}</a></li>
+      {{/each}}
+    </ul>
+    {{#if category}}
+    <div>
+      <span class="badge grey lighten-3"><em>{{category.name}}</em></span>
+    </div>
+    {{/if}}
+  </div>
   <table class="highlight">
     <thead>
       <tr>
@@ -29,3 +45,10 @@
     </tbody>
   </table>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const elems = document.querySelectorAll('.dropdown-trigger')
+    const instances = M.Dropdown.init(elems)
+  })
+</script>

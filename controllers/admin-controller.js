@@ -17,12 +17,20 @@ const adminController = {
   },
   getSpotsPage: async (req, res, next) => {
     try {
-      const spots = await Spot.findAll({
-        raw: true,
-        nest: true,
-        include: [Category]
-      })
-      return res.render('admin/spots', { spots })
+      const categoryId = Number(req.query.categoryId) || ''
+      const [categories, spots, category] = await Promise.all([
+        Category.findAll({ raw: true }),
+        Spot.findAll({
+          raw: true,
+          nest: true,
+          include: [Category],
+          where: {
+            ...categoryId ? { categoryId } : {}
+          }
+        }),
+        Category.findByPk(categoryId, { raw: true })
+      ])
+      return res.render('admin/spots', { categories, spots, category })
     } catch (err) {
       next(err)
     }
