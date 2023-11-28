@@ -1,5 +1,5 @@
 const { Spot, Category } = require('../models')
-const { localFileHandler } = require('../helpers/file-helpers')
+const { imgurFileHandler } = require('../helpers/file-helpers')
 
 const adminController = {
   getLoginPage: (req, res) => {
@@ -49,7 +49,7 @@ const adminController = {
       const { name, categoryId, tel, address, openingHours, closedHours, description } = req.body
       if (!name || !categoryId || !tel || !address || !openingHours || !closedHours || !description) throw new Error('欄位請填寫完成！')
       const { file } = req
-      const filePath = await localFileHandler(file)
+      const filePath = await imgurFileHandler(file)
 
       await Spot.create({
         name,
@@ -87,7 +87,7 @@ const adminController = {
       const spot = await Spot.findByPk(req.params.id)
       if (!spot) throw new Error('景點資料不存在！')
       const { file } = req
-      const filePath = await localFileHandler(file)
+      const filePath = await imgurFileHandler(file)
 
       await Spot.update({
         name,
