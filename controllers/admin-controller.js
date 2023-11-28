@@ -119,8 +119,12 @@ const adminController = {
   },
   getCategoriesPage: async (req, res, next) => {
     try {
-      const categories = await Category.findAll({ raw: true })
-      return res.render('admin/categories', { categories })
+      const [categories, category] = await Promise.all([
+        Category.findAll({ raw: true }),
+        Category.findByPk(req.params.id, { raw: true })
+      ])
+
+      return res.render('admin/categories', { categories, category })
     } catch (err) {
       next(err)
     }
@@ -130,6 +134,18 @@ const adminController = {
       const { name } = req.body
       if (!name) throw new Error('請輸入類別資料！')
       await Category.create({ name })
+      req.flash('success_msg', '成功新增一筆類別！')
+      res.redirect('/admin/categories')
+    } catch (err) {
+      next(err)
+    }
+  },
+  putCategory: async (req, res, next) => {
+    try {
+      const { name } = req.body
+      if (!name) throw new Error('欄位不得為空！')
+      await Category.update({ name }, { where: { id: req.params.id } })
+      req.flash('success_msg', '成功修改一筆類別！')
       res.redirect('/admin/categories')
     } catch (err) {
       next(err)

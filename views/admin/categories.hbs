@@ -2,15 +2,29 @@
 <div class="container">
   <h3 class="blue-grey-text text-darken-1 mb-2" style="letter-spacing: 1px;">後台<span class="badge yellow lighten-3">類別資料</span></h3>
   <div class="row">
-    <form class="col s12" action="/admin/categories" method="POST">
-      <div class="valign-wrapper">
-        <div class="input-field mr-2">
-          <input id="name" name="name" type="text" class="validate">
-          <label for="name">New category</label>
+    {{#if category}}
+      <form class="col s12" action="/admin/categories/{{category.id}}?_method=PUT" method="POST">
+        <div class="valign-wrapper">
+          <div class="input-field mr-2">
+            <input id="name" name="name" type="text" class="validate" value="{{category.name}}">
+            <label for="name">Edit category</label>
+          </div>
+            <button class="btn-floating btn-small waves-effect waves-light" type="submit"><i class="material-icons">edit</i></button>
         </div>
-          <button class="btn-floating btn-small waves-effect waves-light" type="submit"><i class="material-icons">add</i></button>
-      </div>
-    </form>
+        <p class="m-0"><a href="/admin/categories"><em>Or create a new category？</em></a></p>
+      </form>
+    {{else}}
+      <form class="col s12" action="/admin/categories" method="POST">
+        <div class="valign-wrapper">
+          <div class="input-field mr-2">
+            <input id="name" name="name" type="text" class="validate">
+            <label for="name">New category</label>
+          </div>
+            <button class="btn-floating btn-small waves-effect waves-light" type="submit"><i class="material-icons">add</i></button>
+        </div>
+      </form>
+    {{/if}}
+
   </div>
   <table class="highlight">
     <thead>
@@ -25,7 +39,7 @@
       {{#each categories}}
       <tr>
         <td>{{this.name}}</td>
-        <td><a href="/admin/categories/{{this.id}}/edit"><i class="material-icons">edit</i></a></td>
+        <td><a href="/admin/categories/{{this.id}}"><i class="material-icons">edit</i></a></td>
         <form action="/admin/categories/{{this.id}}?_method=DELETE" method="POST" style="display: inline;">
           <td>
             <button class="waves-effect waves-light btn-flat p-0 m-0" type="submit" style="" onclick="return confirm(`確定要刪除「{{this.name}}」這筆類別資料嗎？`)"><i class="material-icons" style="color: red; font-size: 1.6rem;">delete</i></button>
