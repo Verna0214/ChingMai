@@ -1,4 +1,5 @@
 const { Spot, Category } = require('../models')
+const { localFileHandler } = require('../helpers/file-helpers')
 
 const adminController = {
   getLoginPage: (req, res) => {
@@ -47,6 +48,9 @@ const adminController = {
     try {
       const { name, categoryId, tel, address, openingHours, closedHours, description } = req.body
       if (!name || !categoryId || !tel || !address || !openingHours || !closedHours || !description) throw new Error('欄位請填寫完成！')
+      const { file } = req
+      const filePath = await localFileHandler(file)
+
       await Spot.create({
         name,
         tel,
@@ -54,7 +58,8 @@ const adminController = {
         opening_hours: openingHours,
         closed_hours: closedHours,
         description,
-        categoryId
+        categoryId,
+        image: filePath || null
       })
       req.flash('success_msg', '成功新增一筆景點資料！')
       return res.redirect('/admin/spots')
@@ -81,6 +86,8 @@ const adminController = {
       if (!name || !categoryId || !tel || !address || !openingHours || !closedHours || !description) throw new Error('欄位請填寫完成！')
       const spot = await Spot.findByPk(req.params.id)
       if (!spot) throw new Error('景點資料不存在！')
+      const { file } = req
+      const filePath = await localFileHandler(file)
 
       await Spot.update({
         name,
@@ -89,14 +96,15 @@ const adminController = {
         opening_hours: openingHours,
         closed_hours: closedHours,
         description,
-        categoryId
+        categoryId,
+        image: filePath || spot.image
       }, {
         where: {
           id: spot.id
         }
       })
       req.flash('success_msg', '成功修改景點資料！')
-      return res.redirect('/admin/spots')
+      return res.redirect(`/admin/spots/${req.params.id}`)
     } catch (err) {
       next(err)
     }

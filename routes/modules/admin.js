@@ -2,18 +2,19 @@ const express = require('express')
 const router = express.Router()
 
 const adminController = require('../../controllers/admin-controller')
+const upload = require('../../middleware/multer')
 
 router.get('/spots/:id/edit', adminController.editSpotPage)
 router.get('/spots/create', adminController.createSpotPage)
 router.get('/spots/:id', adminController.getSpot)
-router.put('/spots/:id', adminController.putSpot)
+router.put('/spots/:id', upload.single('image'), adminController.putSpot)
 router.delete('/spots/:id', adminController.deleteSpot)
 router.get('/categories/:id', adminController.getCategoriesPage)
 router.put('/categories/:id', adminController.putCategory)
 router.delete('/categories/:id', adminController.deleteCategory)
 router.get('/spots', adminController.getSpotsPage)
 router.get('/categories', adminController.getCategoriesPage)
-router.post('/spots', adminController.postSpot)
+router.post('/spots', upload.single('image'), adminController.postSpot)
 router.post('/categories', adminController.postCategory)
 
 // fallback router
