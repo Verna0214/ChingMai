@@ -1,5 +1,6 @@
 const { Spot, Category } = require('../models')
 const { imgurFileHandler } = require('../helpers/file-helpers')
+const { getOffset, getPagination } = require('../helpers/pagination-helper')
 
 const adminController = {
   getLoginPage: (req, res) => {
@@ -18,10 +19,17 @@ const adminController = {
   },
   getSpotsPage: async (req, res, next) => {
     try {
+      const DEFAULT_LIMIT = 15
       const categoryId = Number(req.query.categoryId) || ''
+      const page = Number(req.query.page) || 1
+      const limit = Number(req.query.limit) || DEFAULT_LIMIT
+      const offset = getOffset(limit, page)
+
       const [categories, spots, category] = await Promise.all([
         Category.findAll({ raw: true }),
-        Spot.findAll({
+        Spot.findAndCountAll({
+          limit,
+          offset,
           raw: true,
           nest: true,
           include: [Category],
@@ -31,7 +39,7 @@ const adminController = {
         }),
         Category.findByPk(categoryId, { raw: true })
       ])
-      return res.render('admin/spots', { categories, spots, category })
+      return res.render('admin/spots', { categories, spots: spots.rows, category, categoryId, pagination: getPagination(limit, page, spots.count) })
     } catch (err) {
       next(err)
     }
