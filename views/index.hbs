@@ -1,20 +1,31 @@
 {{> header}}
-<div class="container">
-    <div class="row">
+<div class="container mt-3">
+  <div class="row">
     <div class="col s12 m6 l4">
       <div class="card">
-        <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
+        <a href="#">
+          <div class="card-image">
+            <img src="https://i.postimg.cc/prHBcTmq/sam-moghadam-khamseh-0-EEKg-GOe3ps-unsplash.jpg" width="300" height="220">
+          </div>
+        </a>
+        <div class="card-content center">
+          <span class="card-title blue-grey-text text-darken-2">熱門討論</span>
         </div>
       </div>
     </div>
+    {{#each categories}}
+    <div class="col s12 m6 l4">
+      <div class="card">
+        <a href="#">
+          <div class="card-image">
+            <img src="{{this.image}}" width="300" height="220">
+          </div>
+        </a>
+        <div class="card-content center">
+          <span class="card-title blue-grey-text text-darken-2">{{this.name}}</span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
   </div>
 </div>

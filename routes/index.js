@@ -12,7 +12,7 @@ router.use('/admin', authenticated, admin)
 router.get('/login', adminController.getLoginPage)
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), adminController.login)
 router.get('/logout', adminController.logout)
-router.get('/index', spotController.getIndex)
+router.get('/index', spotController.getHomePage)
 router.get('/', spotController.getEntry)
 
 // fallback router
