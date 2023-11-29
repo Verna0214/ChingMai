@@ -264,3 +264,21 @@
   align-items: center;
 }
 
+/* set to !important to override Materialize stylesheet */
+
+.carousel {
+  height: 600px !important;
+}
+
+/* set to flexbox to center the images with the indicator icons */
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  width: 700px !important;
+  height: 450px !important;
+  border-radius: 25px;
+}
