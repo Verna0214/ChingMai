@@ -1,0 +1,385 @@
+{
+  "results":
+  [
+    { 
+      "name": "真心農夫市集",
+      "tel": "+6653231520",
+      "address": "46 อาคารโซน C Atsadathon Rd, Pa Tan Sub-district, Mueang Chiang Mai District, Chiang Mai 50300泰國",
+      "opening_hours": "06:30",
+      "closed_hours": "15:00",
+      "description": "**僅有週末營業**強烈建議早上 6:30 至 7:00 抵達，除了太陽沒那麼炎熱外，人潮也沒那麼多，可以輕鬆舒服的好好逛每一個攤位，不用擔心那麼早攤位是不是還沒擺設好，攤商都非常準時。市集裡有吃、有喝，鹹食、甜食、飲料、咖啡都有攤位供應，物美價廉，可以空腹去那裡吃早餐或中餐。該市集走比較文創有質感的路線，不建議隨意殺價，不過多看看可以找到一些好貨收藏，商品重複性質都不高，很值得排入行程中；地點位於離古城區騎車約10分鐘左右的路程。",
+      "image": "https://megapx-assets.dcard.tw/images/317e308d-0435-4f55-b7a6-b4a95171db9b/1280.webp",
+      "category_id": "購物"
+    },
+    { 
+      "name": "Saturday Night Market",
+      "tel": "None",
+      "address": "69 Wua Lai Rd, Haiya Sub-district, Mueang Chiang Mai District, Chiang Mai 50100泰國",
+      "opening_hours": "17:00",
+      "closed_hours": "23:00",
+      "description": "每週六都有的清邁夜市，有數個 Food Court 可以吃東西，美味度看個人喜好。直線長度不到1公里，但實際慢慢逛完至少也要2小時，可斟酌時間安排。",
+      "image": "https://megapx-assets.dcard.tw/images/ede88328-b212-428a-9eb6-82eb0c1a6b0d/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Sunday Night Market",
+      "tel": "None",
+      "address": "Rachadamnoen Rd, Tambon Si Phum, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "17:00",
+      "closed_hours": "22:00",
+      "description": "每週日都有的清邁夜市，規模比週六夜市大很多，也是有吃有喝有買。夜市起點在塔佩門，一直到最底部的帕邢寺，中間有數條分支，直線長度約1.1公里，不過想要實際逛完的話可能需要4小時以上，可斟酌時間安排，適度放過自己的雙腳，不過夜市都有路邊腳底按摩，半小時 ฿100（週六夜市也有）。",
+      "image": "https://i.postimg.cc/T11HF5PM/2023-12-01-5-07-53.png",
+      "category_id": "美食"
+    },
+    { 
+      "name": "One Nimman",
+      "tel": "+6652080900",
+      "address": "Suthep, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "11:00",
+      "closed_hours": "22:00",
+      "description": "尼曼區著名的棕色建築物，裡面有各式小店，香氛、香皂、衣服、餐廳都有，一樓中庭區週末下午會有一些市集攤位，偏古著商品。",
+      "image": "https://megapx-assets.dcard.tw/images/48c46e8d-7234-408a-b21f-3dcc8d2b220a/1280.webp",
+      "category_id": "購物"
+    },
+    { 
+      "name": "Maya Hall",
+      "tel": "+66982869788",
+      "address": "RX28+XRC, Chang Phueak, Mueang Chiang Mai District, Chiang Mai 50300泰國",
+      "opening_hours": "11:00",
+      "closed_hours": "22:00",
+      "description": "尼曼區的百貨公司。",
+      "image": "https://i.postimg.cc/k5rG5xrs/2023-12-01-5-11-11.png",
+      "category_id": "購物"
+    },
+    { 
+      "name": "Think Park",
+      "tel": "+66631794001",
+      "address": "โครงการ Think Park 165 Huay Kaew Rd, Tambon Su Thep, เมือง Chiang Mai 50000泰國",
+      "opening_hours": "09:00",
+      "closed_hours": "24:00",
+      "description": "尼曼區的逛街的小區域，走得非常日本風路線；特別推一間 PLAYWORKS SHOP&CAFE，裡面賣的衣服平價有設計感，一件約 ฿390 ~ ฿890 不等，也有賣一些明信片、畫、別針等等配件小物。",
+      "image": "https://i.postimg.cc/T1mGFs1X/2023-12-01-5-13-53.png",
+      "category_id": "購物"
+    },
+    { 
+      "name": "LANNA Square",
+      "tel": "+66814090000",
+      "address": "ตําบล ศรีภูมิ, 5 Ratvithi Rd, Tambon Si Phum, Mueang Chiang Mai District, Chiang Mai 50000泰國",
+      "opening_hours": "17:00",
+      "closed_hours": "24:00",
+      "description": "在古城區裡，每天都有開的類似美食市集，周圍都是酒吧，想喝酒可以來。",
+      "image": "https://i.postimg.cc/cJKzFn6p/2023-12-01-5-15-30.png",
+      "category_id": "美食"
+    },
+    { 
+      "name": "瓦洛洛市場",
+      "tel": "None",
+      "address": "Wichayanon Rd, Tambon Chang Moi, Mueang Chiang Mai District, Chiang Mai 50300泰國",
+      "opening_hours": "04:00",
+      "closed_hours": "18:00",
+      "description": "傳統市場，如果想買乾貨伴手禮可以來這邊找找，推5A芒果乾好吃。",
+      "image": "https://i.postimg.cc/2SLdJFF7/2023-12-01-5-17-07.png",
+      "category_id": "購物"
+    },
+    { 
+      "name": "清邁大學夜市",
+      "tel": "None",
+      "address": "100 Huay Kaew Rd, Tambon Chang Phueak, Mueang Chiang Mai District, Chiang Mai 50300泰國",
+      "opening_hours": "17:00",
+      "closed_hours": "22:00",
+      "description": "偏向當地學生在逛的夜市，也是有吃、有喝、有得買的夜市；飲食區是一區一區，有位子可以好好坐著吃，購物的部分偏向臺灣的五分舖風格，商品重複性蠻高的，甚至可以感覺是找同一家上游廠商進貨，不過價格都算蠻便宜，一件素T或短褲大概 ฿100~฿150。",
+      "image": "https://megapx-assets.dcard.tw/images/65375bb3-785a-46c0-83b0-f2f04f4840c7/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "隱藏版大學夜市",
+      "tel": "None",
+      "address": "Suthep Rd, Suthep, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "17:00",
+      "closed_hours": "22:30",
+      "description": "都是當地人在逛的街邊夜市，東西都很好吃，價格也都很親民，大碗的海鮮湯麵（有兩隻泰國蝦、一整條魷魚） ฿115。",
+      "image": "https://megapx-assets.dcard.tw/images/cd3a6e81-b949-4388-806e-91ac27269a3a/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "尚泰清邁購物中心",
+      "tel": "+6653998999",
+      "address": "หมู่ที่ 4 ถ. ซุปเปอร์ไฮเวย์ เชียงใหม่-ลำปาง Fa Ham, Mueang Chiang Mai District, Chiang Mai 50000泰國",
+      "opening_hours": "11:00",
+      "closed_hours": "22:00",
+      "description": "距離古城區有一段距離，百貨內有無印良品。",
+      "image": "https://i.postimg.cc/T1W3G3LV/2023-12-01-9-38-58.png",
+      "category_id": "購物"
+    },
+    { 
+      "name": "Elefin Farm & Cafe",
+      "tel": "+66985492516",
+      "address": "128 บ้านแม่ฮะ 6, Ban Pong, Hang Dong District, Chiang Mai 50230泰國",
+      "opening_hours": "10:00",
+      "closed_hours": "17:00",
+      "description": "如果想看大象可以來這裡！每隻大象看起來都蠻健康，沒有被不當飼養，雖然現場還是有提供騎大象的套裝，但仍然不建議～可以購買拍照的套裝，一組  ฿799，可以拍50張（最多4個人）。都不買套裝行程，也可以直接買一籃香蕉、甘蔗 ฿100（買3送1），可以去平台自己餵大象拍照～離古城區的車程較遠，騎機車單趟40分鐘，行經一段山路；建議多人可以包車前往。",
+      "image": "https://i.postimg.cc/FzrhrrMK/4.jpg",
+      "category_id": "文化"
+    },
+    { 
+      "name": "柴迪龍寺",
+      "tel": "+66971954695",
+      "address": "103 Prapokkloa Rd, Tambon Si Phum, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "05:00",
+      "closed_hours": "22:00",
+      "description": "據說是來清邁一定要去的寺廟，參觀壯觀的蘭納風格塔，門票 ฿50，女生的衣著風格記得不要露肚臍、大腿。",
+      "image": "https://i.postimg.cc/90bFZRdT/3-1.jpg",
+      "category_id": "文化"
+    },
+    { 
+      "name": "清邁拱廊象神廟",
+      "tel": "None",
+      "address": "207 ซอย5 Kaeonawarat Rd, ตำบลวัดเกต อำเภอเมือง Chiang Mai 50000泰國",
+      "opening_hours": "00:00",
+      "closed_hours": "24:00",
+      "description": "有在拜象神的可以來，旁邊販賣部有曾經來臺工作過的員工，會講中文，如果不知道怎麼參拜也可以向其詢問。",
+      "image": "https://i.postimg.cc/xT5M4sQ9/2023-12-01-9-46-06.png",
+      "category_id": "文化"
+    },
+    { 
+      "name": "清邁來康寺",
+      "tel": "None",
+      "address": "Mae Hia, Mueang Chiang Mai District, Chiang Mai 50100泰國",
+      "opening_hours": "05:00",
+      "closed_hours": "17:00",
+      "description": "地點較遠，騎機車單趟大約40分鐘，行經一段山路。在當地人口中相當靈驗著名的寺廟，裡面有一尊「龍婆壇猜佛」香火最旺，第一次來的話可買茉莉花，也可以不買；如果是要還願的話，一定要買茉莉花，但我自己也是第一次去，所以我直接詢問現場的工作人員買茉莉花，價格應該是偏貴，網路上也有人分享可以在山下先買好，我自己是沒找到，所以有需要的人可以再看看。",
+      "image": "https://megapx-assets.dcard.tw/images/43bf3c2d-23d8-42ba-9b85-b3d0a77d2389/1280.webp",
+      "category_id": "文化"
+    },
+    { 
+      "name": "悟孟寺",
+      "tel": "+66932787733",
+      "address": "135 หมู่ที่ 10 Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "05:00",
+      "closed_hours": "20:00",
+      "description": "最有名的隧道中的佛寺，非常特別，如果有時間建議可以來看看，四面環繞森林樹木，非常清幽，也有素可泰典型風格的佛塔。",
+      "image": "https://megapx-assets.dcard.tw/images/939483ae-dc14-44d4-9492-008ce0ac8a1d/1280.webp",
+      "category_id": "文化"
+    },
+    { 
+      "name": "Fern Forest Cafe",
+      "tel": "+66846161144",
+      "address": "54, 1 Singharat Rd, Si Phum Sub-district, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "08:30",
+      "closed_hours": "18:15",
+      "description": "充滿蕨類的早午餐咖啡廳，餐點都蠻好吃不踩雷，不過價格相對就沒那麼親民，多數都是觀光客光顧。",
+      "image": "https://megapx-assets.dcard.tw/images/1d0c1c83-5300-47de-969b-984bd96f7121/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Fahtara Coffee",
+      "tel": "+66846235999",
+      "address": "57 Wiang Kaew Rd, Sripoom Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "08:30",
+      "closed_hours": "20:00",
+      "description": "餐點和飲品都很好吃！位於 Fah Lanna Spa 旁邊，可以吃完接著按摩！",
+      "image": "https://megapx-assets.dcard.tw/images/9ec0dc5b-c0f6-43aa-9e3e-6b33e05050fd/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Ginger Farm Kitchen",
+      "tel": "+6652080928",
+      "address": "One Nimman, Nimmanahaeminda Road, Suthep, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "05:00",
+      "closed_hours": "22:00",
+      "description": "必比登推薦餐廳，價格偏中等，兩人吃飽約 1,800。不敢吃生食（生蟹、生蝦）的人可能會覺得菜單有點難點。",
+      "image": "https://megapx-assets.dcard.tw/images/f0018346-79dd-44cc-bf52-80443cd049cf/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Baan Landai Fine Thai Cuisine",
+      "tel": "+66658484464",
+      "address": "252/13-14 Prapokklao Rd ถนน ศรีภูมิ Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "11:00",
+      "closed_hours": "22:00",
+      "description": "必比登推薦餐廳，價格偏中高，餐點非常好吃！非常值得推薦及回訪，但強烈建議提前一週訂位，我自己第二趟想再吃的時候，提前三天訂位訂不到。",
+      "image": "https://i.postimg.cc/vBxCPg6d/2023-12-01-9-53-21.png",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Huen Muan Jai",
+      "tel": "+66982618029",
+      "address": "24 Ratchaphuek Alley, Tambon Chang Phueak, Mueang Chiang Mai District, Chiang Mai 50300泰國",
+      "opening_hours": "05:00",
+      "closed_hours": "22:00",
+      "description": "必比登推薦餐廳，價格平價親民，兩人吃飽約 ฿800。經典泰北菜風格，餐點看起來雖然平凡，但實際味道非常好吃；用餐區在戶外，建議晚上來吃比較沒那麼炎熱，防蚊液可以備而不用。",
+      "image": "https://megapx-assets.dcard.tw/images/e9969397-6e86-4e0f-9a10-24cc5bc801de/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Maneeket",
+      "tel": "+66981616546",
+      "address": "81 Ratvithi Rd, Tambon Si Phum, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "10:00",
+      "closed_hours": "19:30",
+      "description": "古城區裡的小吃店，味道很當地，價格非常親民，一餐 ฿40 - 50。",
+      "image": "https://megapx-assets.dcard.tw/images/837e6dc8-bd90-4ca6-8675-47b4f9bb99b5/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Kat's Kitchen",
+      "tel": "+66988922265",
+      "address": "17 Ratchamanka Rd, Tambon Phra Sing, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "10:00",
+      "closed_hours": "21:00",
+      "description": "古城區裡的小餐廳，物美價廉，份量很多，絕對可以吃飽才讓你離開。",
+      "image": "https://i.postimg.cc/BQbHRTnD/2023-12-01-9-56-36.png",
+      "category_id": "美食"
+    },
+    { 
+      "name": "发清海南鸡饭",
+      "tel": "+6653327263",
+      "address": "43 Intrawarorot Rd, Tambon Si Phum, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "06:00",
+      "closed_hours": "15:00",
+      "description": "古城區蠻有名的海南雞飯，沙嗲也很好吃！",
+      "image": "https://i.postimg.cc/rwCVJb29/2023-12-01-9-58-15.png",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Sa-Ard Fish Ball Noodle Shop",
+      "tel": "+6653327261",
+      "address": "33 Khang Ruan Jum Rd, Si Phum Sub-district, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "07:00",
+      "closed_hours": "16:30",
+      "description": "除了賣麵、也有賣很夯的火山排骨，味道跟曼谷差不多。",
+      "image": "https://i.postimg.cc/QxqNgw3J/2023-12-01-10-00-00.png",
+      "category_id": "美食"
+    },
+    { 
+      "name": "高怡海南雞飯",
+      "tel": "+66855271412",
+      "address": "Siri Mangkalajarn Rd Lane 13, Tambon Su Thep, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "08:00",
+      "closed_hours": "14:30",
+      "description": "想吃海南雞飯可以來這裡，不過建議早點來，免得中午過後就賣完了～",
+      "image": "https://megapx-assets.dcard.tw/images/48fd70fa-eaa0-464e-bd52-4deecf991565/1280.webp",
+      "category_id": "美食"
+    },
+    { 
+      "name": "Fah Lanna Spa - Old City",
+      "tel": "+66888049984",
+      "address": "57, 57/1 Wiang Kaew Rd, Tambon Si Phum, Mueang Chiang Mai District, Chang Wat Chiang Mai 50200泰國",
+      "opening_hours": "12:00",
+      "closed_hours": "21:00",
+      "description": "建議可以在Klook上預訂，比現場買優惠大概$50元左右，因為有匯差，差不了多少，只是如果想省泰銖現金的話，在Klook可以直接刷台幣信用卡。強烈建議還是要事先預訂，網站、電話都可以預訂；如果是透過Klook購買的話，刷卡後約15分鐘內，店家會寄email給你，詢問你預定的時間，直接透過email往來即可。",
+      "image": "https://megapx-assets.dcard.tw/images/8c764721-8486-44d2-a477-a8591845a9ff/1280.webp",
+      "category_id": "按摩"
+    },
+    { 
+      "name": "Sense Garden Massage & Spa",
+      "tel": "+6652016029",
+      "address": "33/2 Sri Poom Rd, Tambon Si Phum, เมือง Chiang Mai 50200泰國",
+      "opening_hours": "11:00",
+      "closed_hours": "22:00",
+      "description": "價格比 Fah Lanna Spa 便宜一點點，也是建議要提前預訂，舒適度還不錯～",
+      "image": "https://megapx-assets.dcard.tw/images/0c24bb97-fa38-4ee9-8bb7-29436c4f88eb/1280.webp",
+      "category_id": "按摩"
+    },
+    { 
+      "name": "Carrotcoffeecnx",
+      "tel": "+66622569415",
+      "address": "ร้าน Carrot Coffee CNX เลขที่ 42/1 , 42/2 42/3 Ratchamanka Rd Soi 7, พระสิงห์ Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "08:00",
+      "closed_hours": "18:00",
+      "description": "胡蘿蔔蛋糕必吃，草莓塔也很推～非咖啡因飲品也都蠻優秀。",
+      "image": "https://megapx-assets.dcard.tw/images/2d66c5a5-b448-4eaa-932a-37e16052c9e0/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "BOB Coffee",
+      "tel": "+66927145652",
+      "address": "20 ถนนมรกต ซ. 4 Tambon Si Phum, เมือง Chiang Mai 50200泰國",
+      "opening_hours": "08:00",
+      "closed_hours": "18:00",
+      "description": "飲品都非常平價，冷氣也夠冷，位子也很寬敞，高度很適合使用一整天的電腦。",
+      "image": "https://megapx-assets.dcard.tw/images/3dad78fe-e16c-4369-adf3-9cb8bd949268/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "Hang & Craft",
+      "tel": "+66967824653",
+      "address": "9 นิมมานเหมินทร์ ซอย 11 ถนน สุเทพ เมือง Chiang Mai 50200泰國",
+      "opening_hours": "09:00",
+      "closed_hours": "18:00",
+      "description": "位於尼曼區的咖啡廳，很安靜，飲品也很好喝！",
+      "image": "https://megapx-assets.dcard.tw/images/459c5351-52c8-4dbf-8fbf-afd121552a7f/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "Cypress Lanes",
+      "tel": "+66816615161",
+      "address": "77 หมู่ 10 ถนน หางดง สะเมิง, Ban Pong, Hang Dong District, Chiang Mai 50230泰國",
+      "opening_hours": "10:00",
+      "closed_hours": "17:00",
+      "description": "地點偏遠，在大象咖啡廳同一條山路上，如果有時間的朋友也可以繞過去拍拍照，咖啡好喝、景色好美！",
+      "image": "https://i.postimg.cc/90hwxkQt/IMG-3037-2.jpg",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "Brewginning coffee",
+      "tel": "None",
+      "address": "260 Chang Moi Rd, Tambon Chang Moi, Amphoe Mueang Chiang Mai, Chang Wat Chiang Mai 50300泰國",
+      "opening_hours": "07:00",
+      "closed_hours": "19:00",
+      "description": "許多遊客都會來拍照的咖啡廳景點，對面有一個竹編包店，也是很多人會拍照的地方。",
+      "image": "https://megapx-assets.dcard.tw/images/e08df9be-3b28-4df8-857c-cdfb23e74024/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "Akha Ama Phrasingh",
+      "tel": "+66882678014",
+      "address": "175 2 Rachadamnoen Rd, Tambon Si Phum, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "08:00",
+      "closed_hours": "17:30",
+      "description": "得獎咖啡豆的咖啡廳，在地小農種植，可以買幾包回去當伴手禮，250g 約 ฿200~300不等。",
+      "image": "https://megapx-assets.dcard.tw/images/32b240ac-5b32-48c0-82ea-5abab1db2cf6/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "Nuan Cafe & Bistro",
+      "tel": "+66810820797",
+      "address": "Si Phum Sub-district, Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "09:00",
+      "closed_hours": "17:00",
+      "description": "居家風格的咖啡廳，提拉米蘇非常好吃！！咖啡也不錯喝～想看書、用電腦都可以來坐坐。",
+      "image": "https://megapx-assets.dcard.tw/images/739e3ef4-ef84-46e5-858b-7f3b62a173d0/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "Simply Happy - สุขพอดี",
+      "tel": "+66862309536",
+      "address": "Osathaphan Rd, Tambon Wat Ket, Mueang Chiang Mai District, Chiang Mai 50000泰國",
+      "opening_hours": "08:00",
+      "closed_hours": "16:00",
+      "description": "手沖咖啡很棒！但位子算半戶外，沒有冷氣，蠻熱的！印象中沒提供插座！",
+      "image": "https://megapx-assets.dcard.tw/images/942bfd11-64ab-4cf4-9971-b8efef35f941/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "No.39 Cafe",
+      "tel": "+66919193939",
+      "address": "39 2 Mueang Chiang Mai District, Chiang Mai 50200泰國",
+      "opening_hours": "08:30",
+      "closed_hours": "22:00",
+      "description": "網美咖啡廳，裡面有滑水道和水池可以拍美美的照片，但蚊子很多，防蚊液備而不用！",
+      "image": "https://megapx-assets.dcard.tw/images/849630aa-f858-45aa-be22-c8578ba18d90/1280.webp",
+      "category_id": "咖啡廳"
+    },
+    { 
+      "name": "Weekday Coffee",
+      "tel": "+66918591503",
+      "address": "47 Samlarn Rd, Tambon Phra Sing, Mueang Chiang Mai District, Chang Wat Chiang Mai 50200泰國",
+      "opening_hours": "08:00",
+      "closed_hours": "22:00",
+      "description": "早午餐很好吃，飲品也不錯！",
+      "image": "https://i.postimg.cc/gkGNjSHZ/2023-12-01-10-16-47.png",
+      "category_id": "咖啡廳"
+    }
+  ]
+}

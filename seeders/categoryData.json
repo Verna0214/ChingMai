@@ -1,0 +1,25 @@
+{
+  "results":
+  [
+    { 
+      "name": "購物",
+      "image": "https://megapx-assets.dcard.tw/images/48c46e8d-7234-408a-b21f-3dcc8d2b220a/1280.webp"
+    },
+    { 
+      "name": "美食",
+      "image": "https://megapx-assets.dcard.tw/images/1d0c1c83-5300-47de-969b-984bd96f7121/1280.webp"
+    },
+    { 
+      "name": "咖啡廳",
+      "image": "https://megapx-assets.dcard.tw/images/2d66c5a5-b448-4eaa-932a-37e16052c9e0/1280.webp"
+    },
+    { 
+      "name": "文化",
+      "image": "https://megapx-assets.dcard.tw/images/43bf3c2d-23d8-42ba-9b85-b3d0a77d2389/1280.webp"
+    },
+    { 
+      "name": "按摩",
+      "image": "https://megapx-assets.dcard.tw/images/8c764721-8486-44d2-a477-a8591845a9ff/1280.webp"
+    }
+  ]
+}

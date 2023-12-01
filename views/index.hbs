@@ -5,11 +5,13 @@
       <div class="card">
         <a href="/index/topSpots">
           <div class="card-image">
-            <img src="https://i.postimg.cc/prHBcTmq/sam-moghadam-khamseh-0-EEKg-GOe3ps-unsplash.jpg" width="300" height="220">
+            <img src="https://i.postimg.cc/prHBcTmq/sam-moghadam-khamseh-0-EEKg-GOe3ps-unsplash.jpg" width="300" height="220" style="border: 1px solid white; padding: 10px;">
           </div>
         </a>
         <div class="card-content center">
-          <span class="card-title blue-grey-text text-darken-2">熱門討論</span>
+          <a href="/index/topSpots">
+            <span class="card-title blue-grey-text text-darken-2">熱門討論</span>
+          </a>
         </div>
       </div>
     </div>
@@ -18,11 +20,13 @@
       <div class="card">
         <a href="/index/categories/{{this.id}}">
           <div class="card-image">
-            <img src="{{this.image}}" width="300" height="220">
+            <img src="{{this.image}}" width="300" height="220" style="border: 1px solid white; padding: 10px;">
           </div>
         </a>
         <div class="card-content center">
-          <span class="card-title blue-grey-text text-darken-2">{{this.name}}</span>
+          <a href="/index/categories/{{this.id}}">
+            <span class="card-title blue-grey-text text-darken-2">{{this.name}}</span>
+          </a>
         </div>
       </div>
     </div>
