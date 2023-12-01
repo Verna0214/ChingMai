@@ -5,10 +5,11 @@
     <a href="/admin/spots/create" class="waves-effect waves-light btn mb-2 mr-3" style="background: #fb8c00;"><i class="material-icons left">add</i>Create</a>
     
     <!-- Dropdown Trigger -->
-    <a class='dropdown-trigger btn' href='?category=' data-target='dropdown1'><i class="material-icons left">filter_alt</i>Category</a>
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'><i class="material-icons left">filter_alt</i>Category</a>
 
     <!-- Dropdown Structure -->
     <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="?categoryId="><i class="material-icons">cloud</i>全部類別</a></li>
       {{#each categories}}
         <li><a href="?categoryId={{this.id}}"><i class="material-icons">cloud</i>{{this.name}}</a></li>
       {{/each}}
