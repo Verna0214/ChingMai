@@ -17,6 +17,17 @@ const commentController = {
     } catch (err) {
       next(err)
     }
+  },
+  deleteComment: async (req, res, next) => {
+    try {
+      const comment = await Comment.findByPk(req.params.id)
+      if (!comment) throw new Error('評論不存在！')
+      await comment.destroy()
+      req.flash('success_msg', '評論已刪除！')
+      res.redirect('back')
+    } catch (err) {
+      next(err)
+    }
   }
 }
 

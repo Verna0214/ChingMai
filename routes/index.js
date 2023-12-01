@@ -11,6 +11,7 @@ const commentController = require('../controllers/comment-controller')
 
 router.use('/admin', authenticated, admin)
 router.get('/index/categories/:id', spotController.getSpotsPage)
+router.delete('/comments/:id', commentController.deleteComment)
 router.post('/comments', commentController.postComment)
 router.get('/login', adminController.getLoginPage)
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), adminController.login)

@@ -1,4 +1,4 @@
-const { Category, Spot } = require('../models')
+const { Category, Spot, Comment } = require('../models')
 
 const spotController = {
   getEntry: (req, res) => {
@@ -17,11 +17,9 @@ const spotController = {
       const spotId = req.query.spotId
       if (spotId) {
         const spot = await Spot.findByPk(spotId, {
-          raw: true,
-          nest: true,
-          include: [Category]
+          include: [Category, { model: Comment }]
         })
-        return res.render('spot', { spot })
+        return res.render('spot', { spot: spot.toJSON() })
       }
       const [category, spots] = await Promise.all([
         Category.findByPk(req.params.id, { raw: true }),

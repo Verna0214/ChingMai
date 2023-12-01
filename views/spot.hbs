@@ -20,10 +20,31 @@
   </div>
   <h5 class="teal-text text-darken-3">Comments</h5>
   <hr />
+  {{#each spot.Comments}}
+    <div class="row valign-wrapper">
+
+      <div class="col s10">
+        <blockquote>
+          <p><i class="material-icons mr-1">person_pin</i>{{this.name}}</p>
+          <p><i class="material-icons mr-1">textsms</i>{{this.text}}</p>
+          <span class="grey-text text-lighten-1"><em>— {{relativeTimeFromNow this.createdAt}}</em></span>
+        </blockquote>
+      </div>
+      {{#if ../user}}
+        <div class="col s2">
+          <form action="/comments/{{this.id}}?_method=DELETE" method="POST">
+            <button type="submit" class="waves-effect waves-light btn-flat" onclick="return confirm('確定要刪除這則評論嗎？')"><i class="material-icons" style="color: red; font-size: 1.6rem;">delete</i></button>
+          </form>
+        </div>
+      {{/if}}
+      
+    </div>
+  {{/each}}
+  <h5 class="teal-text text-darken-3 mt-3">Leave your Comment</h5>
   <div class="row">
     <form class="form-create s12" action="/comments" method="POST">
       <div class="row">
-        <div class="input-field col s12 m3 mt-4">
+        <div class="input-field col s12 m3 mt-2">
           <i class="material-icons prefix">person_outline</i>
           <input id="name" name="name" type="text" class="validate">
           <label for="name">Name</label>
@@ -39,7 +60,7 @@
       <div class="center mt-2 mb-4">
         <a class="waves-effect waves-light btn mr-3" href="javascript:window.location.replace(document.referrer)"><i class="material-icons left">reply</i>Back</a>
         <input type="hidden" name="spotId" value="{{spot.id}}" />
-        <button class="waves-effect waves-light btn" type="submit" style="background: #e64a19;"><i class="material-icons right">send</i>Submit</button>
+        <button class="waves-effect waves-light btn red" type="submit"><i class="material-icons right">send</i>Submit</button>
       </div>
     </form>
   </div>
