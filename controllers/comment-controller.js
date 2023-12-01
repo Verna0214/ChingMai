@@ -7,6 +7,11 @@ const commentController = {
       if (!name || !text) throw new Error('欄位請填寫完成！')
       const spot = await Spot.findByPk(spotId)
       if (!spot) throw new Error('景點資料不存在！')
+      await Spot.increment('commentCounts', {
+        where: {
+          id: spotId
+        }
+      })
       await Comment.create({
         name,
         text,
@@ -20,9 +25,16 @@ const commentController = {
   },
   deleteComment: async (req, res, next) => {
     try {
-      const comment = await Comment.findByPk(req.params.id)
+      const comment = await Comment.findByPk(req.params.id, {
+        include: [Spot]
+      })
       if (!comment) throw new Error('評論不存在！')
       await comment.destroy()
+      await Spot.decrement('commentCounts', {
+        where: {
+          id: comment.Spot.id
+        }
+      })
       req.flash('success_msg', '評論已刪除！')
       res.redirect('back')
     } catch (err) {

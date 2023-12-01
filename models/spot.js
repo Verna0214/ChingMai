@@ -22,7 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     closed_hours: DataTypes.STRING,
     description: DataTypes.STRING(1000),
     image: DataTypes.STRING,
-    google_link: DataTypes.STRING
+    google_link: DataTypes.STRING,
+    commentCounts: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Spot',
