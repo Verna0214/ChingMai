@@ -14,6 +14,15 @@ const spotController = {
   },
   getSpotsPage: async (req, res, next) => {
     try {
+      const spotId = req.query.spotId
+      if (spotId) {
+        const spot = await Spot.findByPk(spotId, {
+          raw: true,
+          nest: true,
+          include: [Category]
+        })
+        return res.render('spot', { spot })
+      }
       const [category, spots] = await Promise.all([
         Category.findByPk(req.params.id, { raw: true }),
         Spot.findAll({
@@ -23,7 +32,6 @@ const spotController = {
           }
         })
       ])
-
       return res.render('spots', { spots, category })
     } catch (err) {
       next(err)
