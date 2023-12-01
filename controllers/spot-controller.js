@@ -48,6 +48,15 @@ const spotController = {
     } catch (err) {
       next(err)
     }
+  },
+  getTopSpot: async (req, res, next) => {
+    try {
+      const spot = await Spot.findByPk(req.params.id, { include: [Category, { model: Comment }] })
+      if (!spot) throw new Error('景點資料不存在！')
+      return res.render('spot', { spot: spot.toJSON() })
+    } catch (err) {
+      next(err)
+    }
   }
 }
 

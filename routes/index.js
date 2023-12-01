@@ -10,6 +10,7 @@ const spotController = require('../controllers/spot-controller')
 const commentController = require('../controllers/comment-controller')
 
 router.use('/admin', authenticated, admin)
+router.get('/index/topSpots/:id', spotController.getTopSpot)
 router.get('/index/categories/:id', spotController.getSpotsPage)
 router.delete('/comments/:id', commentController.deleteComment)
 router.get('/index/topSpots', spotController.getTopSpots)
