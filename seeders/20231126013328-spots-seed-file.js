@@ -19,7 +19,8 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
         category_id: categories[Math.floor(Math.random() * categories.length)].id,
-        image: `https://loremflickr.com/350/270/restaurant,food/?random=${Math.random() * 100}`
+        image: `https://loremflickr.com/350/270/restaurant,food/?random=${Math.random() * 100}`,
+        google_link: `https://www.google.com/maps/search/${faker.name.findName()}`
       })), {})
   },
 
