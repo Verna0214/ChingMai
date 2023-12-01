@@ -9,6 +9,7 @@ const adminController = require('../controllers/admin-controller')
 const spotController = require('../controllers/spot-controller')
 
 router.use('/admin', authenticated, admin)
+router.get('/index/categories/:id', spotController.getSpotsPage)
 router.get('/login', adminController.getLoginPage)
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), adminController.login)
 router.get('/logout', adminController.logout)

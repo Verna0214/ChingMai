@@ -1,0 +1,23 @@
+<div class="container mt-3">
+  <div class="row">
+    <h3 class="blue-grey-text text-darken-1 mb-2 ml-1" style="letter-spacing: 1px;">{{category.name}}</h3>
+    {{#each spots}}
+    <div class="col s12 m6 l4">
+      <div class="card">
+        <a href="?spotId={{this.id}}">
+          <div class="card-image">
+            <img src="{{this.image}}" width="300" height="220">
+          </div>
+        </a>
+        <div class="card-content center">
+          <span class="card-title blue-grey-text text-darken-2" style="font-size: 1rem;">{{this.name}}</span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
+  </div>
+  <div class="center mt-2 mb-4">
+    <a class="waves-effect waves-light btn mr-3" href="javascript:window.location.replace(document.referrer)"><i class="material-icons left">reply</i>Back</a>
+  </div>
+</div>
