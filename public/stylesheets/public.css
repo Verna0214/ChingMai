@@ -2,6 +2,10 @@
   font-family: 'Playpen Sans', 'Kalam', 'Noto Sans TC', sans-serif;
 }
 
+body {
+  background-color: #eceff1;
+}
+
 /* margin */
 .m-0 {
   margin: 0;
@@ -267,7 +271,7 @@
 /* set to !important to override Materialize stylesheet */
 
 .carousel {
-  height: 600px !important;
+  height: 500px !important;
 }
 
 /* set to flexbox to center the images with the indicator icons */
@@ -279,16 +283,13 @@
 
 .carousel-item img {
   width: 700px !important;
-  height: 450px !important;
+  height: 380px !important;
   border-radius: 25px;
 }
 
 .background-container {
   width: 100%;
   height: 100vh;
-  background-image: url('https://i.postimg.cc/g2SmYbsz/pawel-czerwinski-APVg-VX-y-DDc-unsplash.jpg');
-  background-position: center;
-  background-size: cover;
 }
 
 .card {
