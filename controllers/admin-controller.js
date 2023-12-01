@@ -157,7 +157,10 @@ const adminController = {
     try {
       const { name } = req.body
       if (!name) throw new Error('請輸入類別資料！')
-      await Category.create({ name })
+      const { file } = req
+      const filePath = await imgurFileHandler(file)
+
+      await Category.create({ name, image: filePath || null })
       req.flash('success_msg', '成功新增一筆類別！')
       res.redirect('/admin/categories')
     } catch (err) {
@@ -170,7 +173,10 @@ const adminController = {
       const category = await Category.findByPk(req.params.id)
       if (!category) throw new Error('查無類別資料！')
       if (!name) throw new Error('欄位不得為空！')
-      await Category.update({ name }, { where: { id: req.params.id } })
+      const { file } = req
+      const filePath = await imgurFileHandler(file)
+
+      await Category.update({ name, image: filePath || category.image }, { where: { id: req.params.id } })
       req.flash('success_msg', '成功修改一筆類別！')
       res.redirect('/admin/categories')
     } catch (err) {

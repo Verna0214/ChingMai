@@ -1,26 +1,47 @@
 {{> header}}
-<div class="container">
+<div class="container mb-4">
   <h3 class="blue-grey-text text-darken-1 mb-2" style="letter-spacing: 1px;">後台<span class="badge yellow lighten-3">類別資料</span></h3>
   <div class="row">
     {{#if category}}
-      <form class="col s12" action="/admin/categories/{{category.id}}?_method=PUT" method="POST">
+      <form class="col s12" action="/admin/categories/{{category.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="valign-wrapper">
-          <div class="input-field mr-2">
+          <div class="input-field mr-1">
             <input id="name" name="name" type="text" class="validate" value="{{category.name}}">
             <label for="name">Edit category</label>
           </div>
-            <button class="btn-floating btn-small waves-effect waves-light" type="submit"><i class="material-icons">edit</i></button>
+
+          <div class="file-field input-field">
+            <div class="btn btn-flat ml-0 mr-3 p-0">
+              <span><i class="material-icons prefix">drive_folder_upload</i></span>
+              <input type="file" name="image">
+            </div>
+            <div class="file-path-wrapper">
+              <input id="image" class="file-path validate" type="text">
+            </div>
+          </div>
+
+            <button class="btn-floating btn-small waves-effect waves-light ml-1" type="submit"><i class="material-icons">edit</i></button>
         </div>
         <p class="m-0"><a href="/admin/categories"><em>Or create a new category？</em></a></p>
       </form>
     {{else}}
-      <form class="col s12" action="/admin/categories" method="POST">
+      <form class="col s12" action="/admin/categories" method="POST" enctype="multipart/form-data">
         <div class="valign-wrapper">
-          <div class="input-field mr-2">
+          <div class="input-field mr-1">
             <input id="name" name="name" type="text" class="validate">
             <label for="name">New category</label>
           </div>
-            <button class="btn-floating btn-small waves-effect waves-light" type="submit"><i class="material-icons">add</i></button>
+
+          <div class="file-field input-field">
+            <div class="btn btn-flat ml-0 mr-3 p-0">
+              <span><i class="material-icons prefix">drive_folder_upload</i></span>
+              <input type="file" name="image">
+            </div>
+            <div class="file-path-wrapper">
+              <input id="image" class="file-path validate" type="text">
+            </div>
+          </div>
+            <button class="btn-floating btn-small waves-effect waves-light ml-1" type="submit"><i class="material-icons">add</i></button>
         </div>
       </form>
     {{/if}}
