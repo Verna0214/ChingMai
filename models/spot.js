@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate (models) {
       Spot.belongsTo(models.Category, { foreignKey: 'categoryId' })
+      Spot.hasMany(models.Comment, { foreignKey: 'spotId' })
     }
   }
   Spot.init({
