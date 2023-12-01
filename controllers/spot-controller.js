@@ -1,4 +1,4 @@
-const { Category, Spot, Comment } = require('../models')
+const { Category, Spot, Comment, sequelize } = require('../models')
 
 const spotController = {
   getEntry: (req, res) => {
@@ -31,6 +31,20 @@ const spotController = {
         })
       ])
       return res.render('spots', { spots, category })
+    } catch (err) {
+      next(err)
+    }
+  },
+  getTopSpots: async (req, res, next) => {
+    try {
+      const spots = await Spot.findAll({
+        attributes: ['id', 'name', 'image', 'comment_counts'],
+        order: [[sequelize.literal('comment_counts'), 'DESC']],
+        limit: 10,
+        raw: true
+      })
+      console.log(spots)
+      return res.render('spots', { spots })
     } catch (err) {
       next(err)
     }
