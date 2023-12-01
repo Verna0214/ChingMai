@@ -1,4 +1,4 @@
-const { Spot, Category } = require('../models')
+const { Spot, Category, Comment } = require('../models')
 const { imgurFileHandler } = require('../helpers/file-helpers')
 const { getOffset, getPagination } = require('../helpers/pagination-helper')
 
@@ -63,10 +63,11 @@ const adminController = {
         name,
         tel,
         address,
-        opening_hours: openingHours,
-        closed_hours: closedHours,
+        openingHours,
+        closedHours,
         description,
         categoryId,
+        googleLink: `https://www.google.com/maps/search/${address}`,
         image: filePath || null
       })
       req.flash('success_msg', '成功新增一筆景點資料！')
@@ -101,10 +102,11 @@ const adminController = {
         name,
         tel,
         address,
-        opening_hours: openingHours,
-        closed_hours: closedHours,
+        openingHours,
+        closedHours,
         description,
         categoryId,
+        googleLink: `https://www.google.com/maps/search/${address}`,
         image: filePath || spot.image
       }, {
         where: {
@@ -131,12 +133,10 @@ const adminController = {
   getSpot: async (req, res, next) => {
     try {
       const spot = await Spot.findByPk(req.params.id, {
-        raw: true,
-        nest: true,
-        include: [Category]
+        include: [Category, { model: Comment }]
       })
       if (!spot) throw new Error('景點資料不存在！')
-      return res.render('admin/spot', { spot })
+      return res.render('admin/spot', { spot: spot.toJSON() })
     } catch (err) {
       next(err)
     }

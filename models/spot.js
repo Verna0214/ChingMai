@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     tel: DataTypes.STRING,
     address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING,
-    closed_hours: DataTypes.STRING,
+    openingHours: DataTypes.STRING,
+    closedHours: DataTypes.STRING,
     description: DataTypes.STRING(1000),
     image: DataTypes.STRING,
-    google_link: DataTypes.STRING,
+    googleLink: DataTypes.STRING,
     commentCounts: DataTypes.INTEGER
   }, {
     sequelize,

@@ -43,7 +43,6 @@ const spotController = {
         limit: 10,
         raw: true
       })
-      console.log(spots)
       return res.render('spots', { spots })
     } catch (err) {
       next(err)

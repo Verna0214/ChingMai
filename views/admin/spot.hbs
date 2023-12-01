@@ -1,6 +1,5 @@
 {{> header}}
 <div class="container mb-5 mt-2">
-  <h3 class="blue-grey-text text-darken-1">後台</h3>
   <h5 class="orange-text text-darken-4">{{spot.name}}</h5>
   <span>[{{spot.Category.name}}]</span>
   <div class="row mt-4">
@@ -11,15 +10,38 @@
       <div class="col s12 l6">
         <ul>
           <li class="mb-3"><i class="material-icons mr-1">chat</i>{{spot.description}}</li>
-          <li class="mb-1"><i class="material-icons mr-1">schedule</i>營業時間：{{spot.opening_hours}} ～ {{spot.closed_hours}}</li>
+          <li class="mb-1"><i class="material-icons mr-1">schedule</i>營業時間：{{spot.openingHours}} ～ {{spot.closedHours}}</li>
           <li class="mb-1"><i class="material-icons mr-1">phone</i>聯絡電話：{{spot.tel}}</li>
-          <li class="mb-1"><i class="material-icons mr-1">location_on</i>詳細地址：<a href="{{spot.google_link}}" target="_blank">{{spot.address}}</a></li>
-          <li class="mb-1"><i class="material-icons mr-1">flag</i>留言數：0</li>
+          <li class="mb-1"><i class="material-icons mr-1">location_on</i>詳細地址：<a href="{{spot.googleLink}}" target="_blank">{{spot.address}}</a></li>
+          <li class="mb-1"><i class="material-icons mr-1">flag</i>評論數：{{spot.commentCounts}}</li>
         </ul>
       </div>
     </div>
   </div>
-  <a class="waves-effect waves-light btn mr-3" href="/admin/spots"><i class="material-icons left">reply</i>Back</a>
+  <h5 class="teal-text text-darken-3">Comments</h5>
+  <hr />
+  {{#each spot.Comments}}
+    <div class="row valign-wrapper">
+
+      <div class="col s10">
+        <blockquote>
+          <p><i class="material-icons mr-1">person_pin</i>{{this.name}}</p>
+          <p><i class="material-icons mr-1">textsms</i>{{this.text}}</p>
+          <span class="grey-text text-lighten-1"><em>— {{relativeTimeFromNow this.createdAt}}</em></span>
+        </blockquote>
+      </div>
+      <div class="col s2">
+      {{#if ../user}}
+          <form action="/comments/{{this.id}}?_method=DELETE" method="POST">
+            <button type="submit" class="waves-effect waves-light btn-flat" onclick="return confirm('確定要刪除這則評論嗎？')"><i class="material-icons" style="color: red; font-size: 1.6rem;">delete</i></button>
+          </form>
+      {{/if}}
+      </div>
+    </div>
+  {{/each}}
+  <div class="center">
+    <a class="waves-effect waves-light btn mt-3 mr-3" href="/admin/spots"><i class="material-icons left">reply</i>Back</a>
+  </div>
 </div>
 
 <script>
