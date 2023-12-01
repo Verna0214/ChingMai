@@ -18,8 +18,30 @@
       </div>
     </div>
   </div>
-  <div class="center mt-2 mb-4">
-    <a class="waves-effect waves-light btn mr-3" href="javascript:window.location.replace(document.referrer)"><i class="material-icons left">reply</i>Back</a>
+  <h5 class="teal-text text-darken-3">Comments</h5>
+  <hr />
+  <div class="row">
+    <form class="form-create s12" action="/comments" method="POST">
+      <div class="row">
+        <div class="input-field col s12 m3 mt-4">
+          <i class="material-icons prefix">person_outline</i>
+          <input id="name" name="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m8">
+          <i class="material-icons prefix">edit_note</i>
+          <textarea id="text" name="text" class="materialize-textarea"></textarea>
+          <label for="text">Comment</label>
+        </div>
+      </div>
+      <div class="center mt-2 mb-4">
+        <a class="waves-effect waves-light btn mr-3" href="javascript:window.location.replace(document.referrer)"><i class="material-icons left">reply</i>Back</a>
+        <input type="hidden" name="spotId" value="{{spot.id}}" />
+        <button class="waves-effect waves-light btn" type="submit" style="background: #e64a19;"><i class="material-icons right">send</i>Submit</button>
+      </div>
+    </form>
   </div>
 </div>
 
