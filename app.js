@@ -25,7 +25,7 @@ app.use('/upload', express.static(path.join(__dirname, 'upload')))
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: true
 }))
 app.use(passport.initialize())
 app.use(passport.session())
