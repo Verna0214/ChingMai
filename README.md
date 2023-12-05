@@ -64,6 +64,7 @@ npm run dev
 - **Handlebars**
 - **MySQL**
 - **MVC**
+- **RWD**
 - **AWS Elastic Beanstalk & RDS deploy**
 ## 開發者
 - Verna Chen
